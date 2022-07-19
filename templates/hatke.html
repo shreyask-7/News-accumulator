@@ -1,0 +1,21 @@
+{% extends 'home.html' %}
+
+{% block div %}
+<div class="row">
+    {% for object in object_list %}
+    <div class="col-sm-6">
+      <div class="card" id="bg_color">
+        <div class="card-body">
+          <h5 class="card-title">{{object.title}}</h5>
+          <p class="card-text">{{object.para}}</p>
+          <a href="{{object.url}}" class="btn btn-primary">Read full article
+          </a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+{% endblock div %}
+
+{% block h1 %}Offbeat{% endblock h1 %}
+{% block p %}A sense of humour means looking at things from an different angle{% endblock p %}

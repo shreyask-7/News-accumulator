@@ -1,0 +1,21 @@
+{% extends 'home.html' %}
+
+{% block div %}
+<div class="row">
+    {% for object in object_list %}
+    <div class="col-sm-6">
+      <div class="card" id="bg_color">
+        <div class="card-body">
+          <h5 class="card-title">{{object.title}}</h5>
+          <p class="card-text">{{object.para}}</p>
+          <a href="{{object.url}}" class="btn btn-primary">Read full article
+          </a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+{% endblock div %}
+
+{% block h1 %}World{% endblock h1 %}
+{% block p %} Thinking of our world today makes me wonder about tomorrow, a year, a decade, or a century later. I look back at what we did in the past and what we have accomplished as a race, a human race. It makes me realize how much can happen in a matter of years. What will happen in this next century? How advance will are technologies be then? How much of the world, as we know it, still be around?{% endblock p %}

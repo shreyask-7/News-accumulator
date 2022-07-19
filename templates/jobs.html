@@ -1,0 +1,21 @@
+{% extends 'home.html' %}
+
+{% block div %}
+<div class="row">
+    {% for object in object_list %}
+    <div class="col-sm-6">
+      <div class="card" id="bg_color">
+        <div class="card-body">
+          <h5 class="card-title">{{object.title}}</h5>
+          <p class="card-text">{{object.para}}</p>
+          <a href="{{object.url}}" class="btn btn-primary">Read full article
+          </a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+{% endblock div %}
+
+{% block h1 %}Jobs{% endblock h1 %}
+{% block p %}‘We need to start thinking about jobs the way we think about carbon emissions. Because entrepreneurs do not take into account the social consequences that their investments have on jobs, governments need to intervene with subsidies and taxes.’{% endblock p %}
